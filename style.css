@@ -1,0 +1,178 @@
+/* ==========================================
+   全体設定
+   ========================================== */
+
+html {
+    scroll-behavior: smooth; /* ★スムーズスクロールの設定 */
+}
+
+
+body { 
+    margin: 0; 
+    background-color: #fcfcfc; 
+    color: #333; 
+    font-family: 'Noto Serif JP', serif; 
+    line-height: 1.8; 
+}
+a { text-decoration: none; color: inherit; }
+
+/* ==========================================
+    ヘッダーエリア
+   ========================================== */
+/*
+.header { text-align: center; padding: 50px 0; }
+.nav { margin-top: 10px; }
+.nav a { margin: 0 20px; font-size: 16px; color: #555; transition: 0.3s; }
+.nav a:hover { color: #31673f; }
+/* ★ロゴ画像用の設定 */ 
+/*
+.header-logo-img {
+    /* ★ロゴの大きさを変えたい時は、ここの数字を調整します */
+    /*
+    height: 130px; 
+    width: auto;  /* 高さに合わせて横幅は自動で調整されます */
+    /*
+    transition: 0.3s; /* マウスを乗せた時のアニメーション用 */
+    /*
+}
+    */
+/*
+.logo-en {
+  font-family: var(--font-sans);
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  letter-spacing: 0.3em;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+*/
+/* ★マウスを乗せた時に、少しだけフワッと透明になるオシャレ設定 */
+.header-logo-img:hover {
+    opacity: 0.7;
+}
+
+/* ==========================================
+   ヒーローエリア
+   ========================================== */
+.hero { position: relative; width: 100%; height: 650px; overflow: hidden; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; }
+.hero-gradient {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 80%;
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 0) 0%, #fcfcfc 100%);
+}
+.hero-overlay-text {
+    position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);
+    color: #31673f; border: 1px solid #31673f; padding: 8px 30px; border-radius: 30px;
+    font-size: 13px; letter-spacing: 0.1em; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px);
+}
+
+/* ==========================================
+   共通セクション設定
+   ========================================== */
+/* ★背景を横いっぱいにグレーにするための設定 */
+.background-gray { 
+    background-color: #f8f8f8; 
+    width: 100%;
+}
+main .container { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 100px 20px; 
+    text-align: center; 
+}
+.title { font-size: 26px; font-weight: 400; letter-spacing: 0.2em; margin-bottom: 10px; }
+.en-title { font-size: 12px; color: #999; letter-spacing: 0.1em; }
+.title-line { width: 40px; height: 1px; background: #31673f; margin: 20px auto 40px; }
+
+/* ==========================================
+   サービスエリア
+   ========================================== */
+.service-full-width { background-color: #fcfcfc; width: 100%; }
+.service-grid { display: flex; justify-content: center; gap: 80px; margin-bottom: 50px; }
+.service-item { flex: 1; max-width: 300px; }
+
+/* ★Figmaから書き出した画像をアイコンにする場合の設定 */
+.figma-icon {
+    /* ★画像の大きさを変更したい場合はここの数字（50px）をいじります */
+    width: 50px; 
+    height: auto;
+    margin-bottom: 15px;
+    /* ★画像が見つからない時は非表示になるようにしています */
+    display: inline-block; 
+}
+
+/* 仮置きのアイコンフォントの設定 */
+.service-icon-font { font-size: 40px !important; color: #31673f; margin-bottom: 15px; font-variation-settings: 'wght' 300; }
+.en-sub { font-size: 11px; color: #aaa; margin-bottom: 15px; }
+.service-description { font-size: 14px; color: #666; text-align: left; }
+
+/* ==========================================
+   View Moreボタン共通
+   ========================================== */
+.view-more { display: inline-block; padding: 12px 50px; border: 1px solid #31673f; color: #31673f; font-size: 13px; transition: 0.3s; }
+.view-more:hover { background-color: #31673f; color: #fff; }
+
+/* ==========================================
+   TOPに戻るボタン
+   ========================================== */
+.top-button-container { margin-bottom: 80px; display: flex; flex-direction: column; align-items: center; }
+.circle-arrow { width: 50px; height: 50px; border: 1px solid #31673f; border-radius: 50%; color: #31673f; line-height: 48px; font-size: 20px; margin-bottom: 8px; transition: 0.3s; }
+.circle-arrow:hover { background-color: #31673f; color: #fff; }
+.top-label { font-size: 10px; color: #31673f; letter-spacing: 0.1em; }
+
+/* ==========================================
+   営業時間・アクセス (全体的に文字を大きくしました！)
+   ========================================== */
+.access-grid { 
+    display: flex; 
+    justify-content: center; 
+    gap: 100px; 
+    text-align: left;
+}
+.info-block { width: 320px; } /* ★文字が大きくなったので、少しだけ箱の幅を広げました */
+
+.info-block h3 { 
+    font-size: 20px; /* ★元の16pxから20pxに！(見出しサイズ調整) */
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+}
+.mini-icon { 
+    font-size: 22px !important; /* ★時計やピンのアイコンを少し大きく */
+    margin-right: 8px; 
+    color: #31673f; 
+    font-variation-settings: 'wght' 300; 
+}
+.en-mini { 
+    font-size: 12px; /* ★英語のサブタイトルを少し大きく */
+    color: #aaa; 
+    font-weight: normal; 
+    margin-left: auto; 
+}
+.row { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 16px; /* ★元の14pxから16pxに！(営業時間の文字サイズ調整) */
+    margin-bottom: 12px; 
+}
+.holiday { color: #999; }
+
+.address-text {
+    font-size: 16px; /* ★元の14pxから16pxに！(住所の文字サイズ調整) */
+    line-height: 2;  /* ★行間を少し広げて読みやすくしました */
+}
+.tel {
+    font-size: 18px; /* ★電話番号はさらに少し大きくして目立たせました */
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   フッター
+   ========================================== */
+.footer { padding: 80px 0; border-top: 1px solid #eee; text-align: center; }
+.footer-logo .jp { font-size: 22px; letter-spacing: 0.3em; margin-bottom: 5px; }
+.footer-logo .en { font-size: 10px; color: #999; margin-bottom: 30px; letter-spacing: 0.1em; }
+.copyright { font-size: 11px; color: #bbb; }

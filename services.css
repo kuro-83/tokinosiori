@@ -1,0 +1,316 @@
+/* ================================================
+   services.css — 時の栞 サービスページ（固有スタイル）
+   共通スタイルは common.css を参照
+   ================================================ */
+
+/* ================================================
+   HERO
+   ================================================ */
+.hero-section {
+  width: 100%;
+  padding: 4rem 0 5rem;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* ================================================
+   サービスセクション共通
+   ================================================ */
+.service-section {
+  width: 100%;
+  padding: 4rem 0 5rem;
+}
+
+.service-section--bg    { background-color: var(--color-bg); }
+.service-section--white { background-color: var(--color-white); }
+
+/* 2カラム Intro Row */
+.intro-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* テキスト左・画像右。モバイルでは画像上・テキスト下 */
+.intro-row--reverse .intro-text  { order: 1; }
+.intro-row--reverse .intro-image { order: 2; }
+
+@media (max-width: 768px) {
+  .intro-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .intro-row--reverse .intro-image { order: 1; }
+  .intro-row--reverse .intro-text  { order: 2; }
+}
+
+/* アイコン + 見出し行 */
+.service-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.service-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  font-weight: 300;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+.service-body {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+/* 画像ラッパー */
+.img-wrap--4-3 {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.img-wrap--4-3:hover .cover-img {
+  transform: scale(1.03);
+}
+
+/* ================================================
+   古書カテゴリ グリッド
+   ================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 640px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* ================================================
+   コーヒーメニュー グリッド
+   ================================================ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3rem;
+}
+
+@media (max-width: 640px) {
+  .menu-grid { grid-template-columns: 1fr; }
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-item__info {
+  flex: 1;
+}
+
+.menu-item__name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.menu-item__name-en {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item__desc {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+.menu-item__price {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+.menu-note {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.menu-note p {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0.7;
+  line-height: 2;
+}
+
+/* ================================================
+   イベントリスト
+   ================================================ */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.event-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 2rem 2.5rem;
+}
+
+.event-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.event-schedule {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.event-desc {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* ================================================
+   予約ボックス
+   ================================================ */
+.reservation-box {
+  border: 2px solid rgba(49, 103, 63, 0.30);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.reservation-main {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.reservation-sub {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+}
+
+.reservation-tel,
+.reservation-mail {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.reservation-mail {
+  transition: opacity 0.3s;
+}
+.reservation-mail:hover { opacity: 0.7; }
+
+.reservation-divider {
+  opacity: 0.3;
+}
+
+@media (max-width: 480px) {
+  .reservation-divider { display: none; }
+}

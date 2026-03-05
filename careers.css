@@ -1,0 +1,334 @@
+/* ================================================
+   careers.css — 時の栞 採用ページ（固有スタイル）
+   共通スタイルは common.css を参照
+   ================================================ */
+
+/* ================================================
+   HERO
+   ================================================ */
+.hero-section {
+  width: 100%;
+  padding: 4rem 0 5rem;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.hero-sub {
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.divider-line {
+  width: 6rem;
+  height: 1px;
+  background-color: var(--color-primary);
+  margin-inline: auto;
+}
+
+/* ================================================
+   INTRODUCTION
+   ================================================ */
+.intro-section {
+  width: 100%;
+  padding: 3rem 0 4rem;
+}
+
+.card-bg {
+  background-color: var(--color-bg);
+  padding: 2.5rem 3rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 640px) {
+  .card-bg { padding: 1.75rem 1.25rem; }
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.body-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.body-text:last-child { margin-bottom: 0; }
+
+/* ================================================
+   JOB POSITIONS
+   ================================================ */
+.positions-section {
+  width: 100%;
+  padding: 2rem 0 3rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.position-card {
+  background-color: var(--color-white);
+  border: 2px solid rgba(0, 0, 0, 0.10);
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 640px) {
+  .position-card { padding: 1.5rem 1.25rem; }
+}
+
+.position-header {
+  margin-bottom: 2rem;
+}
+
+.position-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.position-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3vw, 1.875rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.position-badge {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  border: 2px solid rgba(49, 103, 63, 0.30);
+  border-radius: 9999px;
+  padding: 0.2rem 1rem;
+}
+
+.position-desc {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.col-heading {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.dot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dot-list li {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.dot-list li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.45rem;
+  margin-right: 0.75rem;
+}
+
+.conditions-block {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+  .conditions-grid { grid-template-columns: 1fr; }
+}
+
+.conditions-item dt {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.conditions-item dd {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.benefit-list li {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* ================================================
+   APPLICATION PROCESS
+   ================================================ */
+.apply-section {
+  width: 100%;
+  padding: 4rem 0 5rem;
+  background-color: var(--color-white);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.contact-box {
+  background-color: var(--color-bg);
+  border: 2px solid rgba(49, 103, 63, 0.30);
+  border-radius: 0.5rem;
+  padding: 2.5rem 3rem;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .contact-box { padding: 1.75rem 1.25rem; }
+}
+
+.contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.contact-desc {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+.contact-value {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+.contact-value:hover { opacity: 0.7; }
+
+.contact-note {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0.6;
+}
